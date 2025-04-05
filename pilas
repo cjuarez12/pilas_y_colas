@@ -1,0 +1,49 @@
+import java.util.Stack;
+
+public class EjemploPilaCompleto {
+    public static void main(String[] args) {
+        // Crear una nueva pila de Strings
+        Stack<String> pila = new Stack<>();
+
+        // Agregar elementos a la pila
+        pila.push("A");
+        pila.push("B");
+        pila.push("C");
+        pila.push("D");
+
+        // Mostrar el tamaño de la pila
+        System.out.println("Tamaño de la pila: " + pila.size());
+
+        // Ver el elemento en la parte superior sin eliminarlo (peek)
+        System.out.println("Elemento en la parte superior (peek): " + pila.peek());
+
+        // Eliminar el elemento en la parte superior (pop)
+        System.out.println("Elemento eliminado (pop): " + pila.pop());
+
+        // Ver el tamaño de la pila después de hacer un pop
+        System.out.println("Tamaño de la pila después de pop: " + pila.size());
+
+        // Ver si la pila está vacía
+        System.out.println("¿Está vacía la pila?: " + pila.isEmpty());
+
+        // Buscar la posición de un elemento (search) en la pila
+        int posicionB = pila.search("B");
+        int posicionC = pila.search("C");
+        int posicionX = pila.search("X");
+
+        System.out.println("Posición de 'B' en la pila: " + posicionB);
+        System.out.println("Posición de 'C' en la pila: " + posicionC);
+        System.out.println("Posición de 'X' en la pila: " + posicionX); // Elemento que no existe
+
+        // Mostrar todos los elementos en la pila
+        System.out.println("Elementos en la pila: " + pila);
+
+        // Eliminar todos los elementos de la pila (usando pop en un ciclo)
+        while (!pila.isEmpty()) {
+            System.out.println("Eliminando elemento: " + pila.pop());
+        }
+
+        // Ver si la pila está vacía después de eliminar todos los elementos
+        System.out.println("¿Está vacía la pila después de eliminar todos los elementos?: " + pila.isEmpty());
+    }
+}
